@@ -1,8 +1,8 @@
 // 👻 Add your image file names here (inside the images folder)
 const assets = [
-  'images/ghost.png',
-  'images/pumpkin.png',
-  'images/bats.png',
+  'Images/ghost.png',
+  'Images/pumpkin.png',
+  'Images/bats.png',
 ];
 
 // Random number helper
@@ -76,4 +76,5 @@ muteBtn.addEventListener("click", () => {
     music.muted = true;
     muteBtn.textContent = "🔇";
   }
+
 });
