@@ -8,7 +8,7 @@
     padding: 0;
     height: 100%;
     background-color: var(--brown);
-    background-image: url('images/background.png');
+    background-image: url('Images/background.png');
     background-size: cover;
     background-position: center;
     background-color: rgba(0, 0, 0, 12); /* adjust 0.0 - 1.0 for darkness */
@@ -130,4 +130,5 @@
 
 #muteBtn:active {
   transform: scale(0.95);
+
 }
