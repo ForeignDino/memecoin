@@ -1,0 +1,133 @@
+:root {
+    --orange: #f57c00;
+    --brown: #2b1b09;
+  }
+  
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: var(--brown);
+    background-image: url('images/background.png');
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 12); /* adjust 0.0 - 1.0 for darkness */
+  z-index: 0; /* above background image but below text/falling images */
+    font-family: "Poppins", sans-serif;
+    color: #f57c00;
+    overflow: hidden;
+  }
+  
+  /* Falling images container */
+  #background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0; /* behind content */
+  }
+  
+  header {
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    z-index: 1;
+  }
+  
+  header h1 {
+    font-size: 80px;
+    letter-spacing: 5px;
+    font-weight: 900;
+    margin: 80px;
+    font-family: 'Creepster', cursive;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 1);
+  }
+  
+  header h1 span {
+    color: var(--orange);
+  }
+  
+  .contract {
+    font-size: 14px;
+    color: #000000;
+    margin-top: 10px;
+  }
+  
+  .content {
+    text-align: center;
+    max-width: 700px;
+    margin: -10px auto;
+    font-size: 18px;
+    line-height: 1.6;
+    position: relative;
+    
+    font-weight: bolder;
+    z-index: 1;
+    color: #ac5600;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+    z-index: 1;
+  }
+  
+  .social-icon {
+    width: 32px;
+    height: 32px;
+    z-index: 1;
+  }
+  .footer {
+    position: fixed;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: #bd5d03;
+    text-shadow: 10px #000000;
+    z-index: 1;
+  }
+  
+  .fall {
+    position: absolute;
+    will-change: transform;
+    opacity: 0.9;
+    pointer-events: none;
+    transition: opacity 1s linear;
+    z-index: 0; /* behind text */
+  }
+  
+  /* Keyframes for spinning (if needed for future use) */
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  /* Mute/Unmute Button */
+#muteBtn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+#muteBtn:hover {
+  background: rgba(0, 0, 0, 0.9);
+  transform: scale(1.1);
+}
+
+#muteBtn:active {
+  transform: scale(0.95);
+}
